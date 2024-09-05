@@ -10,11 +10,9 @@ registration:
 
 speech:
   stt:
-    azureOpenAI:
-      instanceName: 'east2usai'
-      apiKey: '${STT_API_KEY_AZURE}'
-      deploymentName: 'whisper'
-      apiVersion: '2024-06-01'
+    openai:
+      apiKey: '${STT_API_KEY}'
+      model: 'whisper-1'
 
 endpoints:
   assistants:
