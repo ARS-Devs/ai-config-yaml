@@ -20,8 +20,8 @@ speech:
 
 endpoints:
   assistants:
-      disableBuilder: true
+      disableBuilder: false
       # Use either `supportedIds` or `excludedIds` but not both
-      supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb"]
+      supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb","asst_ddZhd7bPQRBFCs9H06MHOs6v"]
       timeoutMs: 780000
   #custom:
