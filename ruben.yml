@@ -22,6 +22,6 @@ endpoints:
   assistants:
       disableBuilder: true
       # Use either `supportedIds` or `excludedIds` but not both
-      supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb"]
+      supportedIds: ["asst_KPQ29JpBKZ6W4fG73jDXZxHd"]
       timeoutMs: 780000
   #custom:
