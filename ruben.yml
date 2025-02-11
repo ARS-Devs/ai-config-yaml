@@ -3,8 +3,8 @@ version: 1.1.2
 cache: false
 
 interface:
-  presets: false
-  prompts: false
+  presets: true
+  prompts: true
 
 registration:
   socialLogins: ["discord", "facebook", "github", "google", "openid"]
