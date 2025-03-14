@@ -1,0 +1,45 @@
+version: 1.1.2
+
+cache: false
+
+#interface:
+  #presets: false
+  #prompts: false
+
+registration:
+  socialLogins: ["discord", "facebook", "github", "google", "openid"]
+  #allowedDomains:
+    #- "advancedrecoverysystems.com"
+    #- "recoverykansascity.com"
+
+speech:
+  stt:
+    openai:
+      apiKey: '${STT_API_KEY}'
+      model: 'whisper-1'
+
+endpoints:
+  azureOpenAI:
+    titleModel: "gpt-4o-mini"
+    assistants: true
+    plugins: false
+    summarize: true
+    summaryModel: "gpt-4o-mini"
+    titleConvo: true
+    disableBuilder: true
+    groups:
+      - group: "namtesting" # arbitrary name
+        assistants: true
+        apiKey: "13956b62171940ca95801d29140ca258"
+        instanceName: "ARS-IT" # name of the resource group or instance
+        version: "2024-05-01-preview"
+        models:
+          gpt-4o:
+            deploymentName: "gpt-4o"
+          gpt-4o-mini:
+            deploymentName: "gpt-4o-mini"
+  assistants:
+      disableBuilder: false
+      # Use either `supportedIds` or `excludedIds` but not both
+      supportedIds: ["asst_ddZhd7bPQRBFCs9H06MHOs6v","asst_AHvZpNr6mekZDxDcdLBvEQ8V","asst_t0AwJn4Yb7LcJVxTRJGa7DAB"]
+      timeoutMs: 780000
