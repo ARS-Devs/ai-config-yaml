@@ -30,7 +30,7 @@ endpoints:
     groups:
       - group: "namtesting" # arbitrary name
         assistants: true
-        apiKey: "13956b62171940ca95801d29140ca258"
+        apiKey: '${AZURE_API_KEY}'
         instanceName: "ARS-IT" # name of the resource group or instance
         version: "2024-05-01-preview"
         models:
