@@ -1,0 +1,38 @@
+version: 1.1.2
+
+cache: false
+
+registration:
+  socialLogins: ["discord", "facebook", "github", "google", "openid"]
+  allowedDomains:
+    - "advancedrecoverysystems.com"
+    - "recoverykansascity.com"
+    - "orlandorecovery.com"
+    - "columbusrecoverycenter.com"
+    - "recoveryindianapolis.com"
+    - "recoveryatlanta.com"
+    - "therecoveryvillage.com"
+    - "palmerlakerecovery.com"
+    - "recoverypalmbeach.com"
+    - "miamidaderecovery.com"
+    - "ridgefieldrecovery.com"
+    - "southjerseyrecovery.com"
+    - "iaffrecoverycenter.com"
+    - "denveroutpatient.com"
+    - "orlandooutpatient.com"
+    - "floridarehab.com"
+        
+
+speech:
+  stt:
+    openai:
+      apiKey: '${STT_API_KEY}'
+      model: 'whisper-1'
+
+endpoints:
+  assistants:
+      disableBuilder: true
+      # Use either `supportedIds` or `excludedIds` but not both
+      supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb","asst_AHvZpNr6mekZDxDcdLBvEQ8V","asst_ddZhd7bPQRBFCs9H06MHOs6v"]
+      timeoutMs: 780000
+  #custom:
