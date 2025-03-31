@@ -30,6 +30,25 @@ speech:
       model: 'whisper-1'
 
 endpoints:
+  azureOpenAI:
+    titleModel: "gpt-4o-mini"
+    assistants: true
+    plugins: false
+    summarize: true
+    summaryModel: "gpt-4o-mini"
+    titleConvo: true
+    disableBuilder: true
+    groups:
+      - group: "namtesting" # arbitrary name
+        assistants: true
+        apiKey: '${AZURE_API_KEY}'
+        instanceName: "ARS-IT" # name of the resource group or instance
+        version: "2024-05-01-preview"
+        models:
+          gpt-4o:
+            deploymentName: "gpt-4o"
+          gpt-4o-mini:
+            deploymentName: "gpt-4o-mini"
   assistants:
       disableBuilder: true
       # Use either `supportedIds` or `excludedIds` but not both
