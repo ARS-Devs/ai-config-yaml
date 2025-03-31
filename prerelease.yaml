@@ -52,7 +52,7 @@ endpoints:
   assistants:
       disableBuilder: true
       # Use either `supportedIds` or `excludedIds` but not both
-      supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb","asst_AHvZpNr6mekZDxDcdLBvEQ8V"]
+      supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb","asst_AHvZpNr6mekZDxDcdLBvEQ8V","asst_YiD3pRS7LihhO8PsSVbwJgBn"]
       #supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb"]
       timeoutMs: 780000
   #custom:
