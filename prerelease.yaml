@@ -22,6 +22,8 @@ registration:
     - "orlandooutpatient.com"
     - "floridarehab.com"
         
+interface:
+  presets: false
 
 speech:
   stt:
