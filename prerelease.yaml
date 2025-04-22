@@ -24,6 +24,7 @@ registration:
         
 interface:
   presets: false
+  parameters: false
 
 speech:
   stt:
