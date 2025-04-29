@@ -21,10 +21,7 @@ registration:
     - "denveroutpatient.com"
     - "orlandooutpatient.com"
     - "floridarehab.com"
-        
-interface:
-  presets: false
-  parameters: false
+
 
 speech:
   stt:
