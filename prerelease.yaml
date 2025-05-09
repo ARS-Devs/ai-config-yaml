@@ -32,6 +32,7 @@ speech:
 endpoints:
   azureOpenAI:
     titleModel: "gpt-4o-mini"
+    titleMethod: "completion"    # Method for title generation (completion or chat)
     assistants: true
     plugins: false
     summarize: true
