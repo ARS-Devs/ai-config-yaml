@@ -30,26 +30,27 @@ speech:
       model: 'whisper-1'
 
 endpoints:
-azureOpenAI:
-    assistants: true
-    plugins: false
-    summarize: true
-    summaryModel: "gpt-4o"
-    titleConvo: true
-    titleModel: "gpt-4o"
-    titleMethod: "completion"
-    disableBuilder: true
-    groups:
-      - group: "namtesting"  # keeping the array structure
-        assistants: true
-        apiKey: '${AZURE_API_KEY}'
-        instanceName: "ARS-IT"
-        version: "2025-01-01-preview"  # updated to match your playground
-        models:
-          gpt-4o:
-            deploymentName: "gpt-4o"
-          gpt-4o-mini:
-            deploymentName: "gpt-4o-mini"
+  azureOpenAI:
+      assistants: true
+      plugins: false
+      summarize: true
+      disableBuilder: true
+      groups:
+        namtesting: # group name as a key, not in an array
+          assistants: true
+          apiKey: '${AZURE_API_KEY}'
+          instanceName: "ARS-IT"
+          version: "2025-01-01-preview"  # updated to match your playground
+          titleModel: "gpt-4o"  # moved inside the group
+          titleMethod: "completion"
+          titleConvo: true
+          summaryModel: "gpt-4o"
+          deploymentName: "gpt-4o"  # default deployment name for the group
+          models:
+            gpt-4o:
+              deploymentName: "gpt-4o"
+            gpt-4o-mini:
+              deploymentName: "gpt-4o-mini"
   assistants:
       disableBuilder: true
       # Use either `supportedIds` or `excludedIds` but not both
