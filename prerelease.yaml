@@ -44,7 +44,7 @@ endpoints:
         assistants: true
         apiKey: '${AZURE_API_KEY}'
         instanceName: "ARS-IT" # name of the resource group or instance
-        version: "2024-05-01-preview"
+        version: "2025-01-01-preview"
         models:
           gpt-4o:
             deploymentName: "gpt-4o"
