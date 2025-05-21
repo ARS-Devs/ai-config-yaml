@@ -33,7 +33,12 @@ endpoints:
   azureOpenAI:
     titleModel: "gpt-4o-mini"
     titleMethod: "completion"    # Method for title generation (completion or chat)
-    assistants: true
+    assistants:
+      # List specific assistant IDs that should be available
+      availableAssistants:
+        - "asst_i6UC0rITU7O3GVuESSSsL04L"  # HeatherAI For Avatar
+        - "asst_z3s3oQKE5uj6zRH54aGJImc4"   # Heather GPT
+        - "asst_6IrFQhflxQTsXfa7rQ0GbFft"   # HR Assistant
     plugins: false
     summarize: true
     summaryModel: "gpt-4o-mini"
