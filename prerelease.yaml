@@ -32,16 +32,16 @@ speech:
 
 endpoints:
   azureOpenAI:
-    titleModel: "gpt-4o-mini"
+    titleModel: "gpt-4o"
     titleMethod: "completion"    # Method for title generation (completion or chat)
     assistants: true
     plugins: false
     summarize: true
-    summaryModel: "gpt-4o-mini"
+    summaryModel: "gpt-4o"
     titleConvo: true
     disableBuilder: true
     groups:
-      - group: "namtesting" # arbitrary name
+      - group: "eastus-heather" # eastus instance of Azure OpenAI
         assistants: true
         apiKey: '${AZURE_API_KEY}'
         instanceName: "ARS-IT" # name of the resource group or instance
@@ -51,6 +51,14 @@ endpoints:
             deploymentName: "gpt-4o"
           gpt-4o-mini:
             deploymentName: "gpt-4o-mini"
+      - group: "eastus2-heather" # eastus2 instance of Azure OpenAI
+        assistants: true
+        apiKey: '${AZURE_API_KEY_EASTUS2}'
+        instanceName: "East2USai" # name of the resource group or instance
+        version: ":2024-11-20"
+        models:
+          gpt-4o:
+            deploymentName: "gpt-4o-heather2"
   assistants:
       disableBuilder: true
       # Use either `supportedIds` or `excludedIds` but not both
