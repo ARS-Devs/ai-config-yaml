@@ -55,7 +55,7 @@ endpoints:
         assistants: true
         apiKey: '${AZURE_API_KEY_EASTUS2}'
         instanceName: "East2USai" # name of the resource group or instance
-        version: "2025-01-01-preview"
+        version: "2024-12-01-preview"
         models:
           gpt-4.1:
             deploymentName: "gpt-4.1-heather1"
