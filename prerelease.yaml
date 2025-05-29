@@ -32,12 +32,12 @@ speech:
 
 endpoints:
   azureOpenAI:
-    titleModel: "gpt-4o"
+    titleModel: "current_model"
     titleMethod: "completion"    # Method for title generation (completion or chat)
     assistants: true
     plugins: false
     summarize: true
-    summaryModel: "gpt-4o"
+    summaryModel: "current_model"
     titleConvo: true
     disableBuilder: true
     groups:
