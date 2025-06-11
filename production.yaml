@@ -22,7 +22,7 @@ registration:
     - "denveroutpatient.com"
     - "orlandooutpatient.com"
     - "floridarehab.com"
-        
+
 
 speech:
   stt:
@@ -31,10 +31,30 @@ speech:
       model: 'whisper-1'
 
 endpoints:
+  azureOpenAI:
+    titleModel: "current_model"
+    titleMethod: "completion"    # Method for title generation (completion or chat)
+    assistants: true
+    plugins: false
+    summarize: true
+    summaryModel: "current_model"
+    titleConvo: true
+    disableBuilder: true
+    groups:
+      - group: "eastus-heather" # eastus instance of Azure OpenAI
+        assistants: true
+        apiKey: '${AZURE_API_KEY}'
+        instanceName: "ARS-IT" # name of the resource group or instance
+        version: "2025-01-01-preview"
+        models:
+          gpt-4o:
+            deploymentName: "gpt-4o"
+          gpt-4o-mini:
+            deploymentName: "gpt-4o-mini"
   assistants:
       disableBuilder: true
       # Use either `supportedIds` or `excludedIds` but not both
-      supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb","asst_AHvZpNr6mekZDxDcdLBvEQ8V"]
+      supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb","asst_AHvZpNr6mekZDxDcdLBvEQ8V","asst_YiD3pRS7LihhO8PsSVbwJgBn"]
       #supportedIds: ["asst_QRL7u13gK6Z2P15ydvmjixxb"]
       timeoutMs: 780000
   #custom:
